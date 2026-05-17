@@ -9,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    /* LIGHT MODE (Day) — warm paper & espresso */
     --espresso: #2C1810;
     --coffee: #4A2F1F;
     --tan: #8B6F47;
@@ -22,8 +21,6 @@
     --nav-bg: rgba(237, 220, 196, 0.85);
     --portrait-filter: sepia(0.15) contrast(1.02) saturate(0.95);
     --portrait-filter-hover: sepia(0) contrast(1.05) saturate(1.05);
-
-    /* Surfaces that stay dark in both themes (project cards, contact, CTAs) */
     --dark-surface: #2C1810;
     --dark-surface-text: #F5E6D3;
     --dark-surface-accent: #D4A574;
@@ -31,7 +28,6 @@
   }
 
   [data-theme="dark"] {
-    /* DARK MODE (Night) — candlelit, moody vintage */
     --espresso: #E8D5B7;
     --coffee: #C9B292;
     --tan: #D4A574;
@@ -44,8 +40,6 @@
     --nav-bg: rgba(31, 20, 11, 0.85);
     --portrait-filter: sepia(0.3) contrast(0.95) saturate(0.9) brightness(0.92);
     --portrait-filter-hover: sepia(0.1) contrast(1) saturate(1) brightness(1);
-
-    /* In dark mode, surface goes even deeper for contrast against bg */
     --dark-surface: #120A05;
     --dark-surface-text: #F5E6D3;
     --dark-surface-accent: #D4A574;
@@ -61,7 +55,6 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -76,7 +69,6 @@
       radial-gradient(at 80% 80%, rgba(212, 165, 116, 0.06) 0%, transparent 50%);
   }
 
-  /* Paper grain texture */
   body::before {
     content: '';
     position: fixed;
@@ -156,9 +148,7 @@
     position: relative;
   }
 
-  .hero-left {
-    animation: fadeUp 1s ease-out 0.3s both;
-  }
+  .hero-left { animation: fadeUp 1s ease-out 0.3s both; }
 
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(40px); }
@@ -182,16 +172,8 @@
     letter-spacing: -2px;
   }
 
-  .hero h1 .italic {
-    font-style: italic;
-    color: var(--tan);
-  }
-
-  .hero h1 .first-letter {
-    font-size: 1.4em;
-    color: var(--tan);
-    font-style: italic;
-  }
+  .hero h1 .italic { font-style: italic; color: var(--tan); }
+  .hero h1 .first-letter { font-size: 1.4em; color: var(--tan); font-style: italic; }
 
   .hero-tagline {
     font-size: 22px;
@@ -212,16 +194,8 @@
     color: var(--tan);
   }
 
-  .hero-meta span {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .hero-meta span::before {
-    content: '✦';
-    color: var(--camel);
-  }
+  .hero-meta span { display: flex; align-items: center; gap: 8px; }
+  .hero-meta span::before { content: '✦'; color: var(--camel); }
 
   .hero-cta {
     display: inline-flex;
@@ -292,15 +266,8 @@
     transition: all 0.6s ease;
   }
 
-  .portrait-frame:hover::before {
-    top: -30px; left: -30px;
-    right: 30px; bottom: 30px;
-  }
-
-  .portrait-frame:hover::after {
-    top: 30px; left: 30px;
-    right: -30px; bottom: -30px;
-  }
+  .portrait-frame:hover::before { top: -30px; left: -30px; right: 30px; bottom: 30px; }
+  .portrait-frame:hover::after { top: 30px; left: 30px; right: -30px; bottom: -30px; }
 
   .portrait {
     width: 100%; height: 100%;
@@ -311,9 +278,7 @@
     transition: filter 0.6s ease;
   }
 
-  .portrait-frame:hover .portrait {
-    filter: var(--portrait-filter-hover);
-  }
+  .portrait-frame:hover .portrait { filter: var(--portrait-filter-hover); }
 
   .portrait-label {
     position: absolute;
@@ -326,16 +291,10 @@
     z-index: 2;
   }
 
-  .portrait-label::before {
-    content: '— ';
-    color: var(--camel);
-  }
+  .portrait-label::before { content: '— '; color: var(--camel); }
 
   /* ============ SECTION DEFAULTS ============ */
-  section {
-    padding: 120px 80px;
-    position: relative;
-  }
+  section { padding: 120px 80px; position: relative; }
 
   .section-label {
     font-family: 'JetBrains Mono', monospace;
@@ -371,9 +330,7 @@
   .section-title .italic { font-style: italic; color: var(--tan); }
 
   /* ============ ABOUT ============ */
-  .about {
-    background: linear-gradient(180deg, var(--paper) 0%, var(--cream) 100%);
-  }
+  .about { background: linear-gradient(180deg, var(--paper) 0%, var(--cream) 100%); }
 
   .about-grid {
     display: grid;
@@ -411,10 +368,7 @@
     transition: all 0.6s ease;
   }
 
-  .stat.visible {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  .stat.visible { opacity: 1; transform: translateX(0); }
 
   .stat-number {
     font-family: 'DM Serif Display', serif;
@@ -434,9 +388,7 @@
   }
 
   /* ============ SKILLS ============ */
-  .skills {
-    background: var(--cream);
-  }
+  .skills { background: var(--cream); }
 
   .skills-grid {
     display: grid;
@@ -457,11 +409,7 @@
     font-style: italic;
   }
 
-  .skill-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+  .skill-list { display: flex; flex-wrap: wrap; gap: 10px; }
 
   .skill-tag {
     padding: 8px 18px;
@@ -483,9 +431,7 @@
   }
 
   /* ============ PROJECTS ============ */
-  .projects {
-    background: linear-gradient(180deg, var(--cream) 0%, var(--paper) 100%);
-  }
+  .projects { background: linear-gradient(180deg, var(--cream) 0%, var(--paper) 100%); }
 
   .project {
     display: grid;
@@ -498,14 +444,8 @@
     transition: all 1s ease;
   }
 
-  .project.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .project:nth-child(even) .project-visual {
-    order: 2;
-  }
+  .project.visible { opacity: 1; transform: translateY(0); }
+  .project:nth-child(even) .project-visual { order: 2; }
 
   .project-number {
     font-family: 'DM Serif Display', serif;
@@ -538,10 +478,7 @@
     padding: 40px;
   }
 
-  .project-visual-inner .icon {
-    font-size: 80px;
-    margin-bottom: 16px;
-  }
+  .project-visual-inner .icon { font-size: 80px; margin-bottom: 16px; }
 
   .project-visual-inner .metric {
     font-family: 'DM Serif Display', serif;
@@ -567,9 +504,7 @@
     background: radial-gradient(circle at 30% 30%, rgba(212, 165, 116, 0.2) 0%, transparent 60%);
   }
 
-  .project-content {
-    position: relative;
-  }
+  .project-content { position: relative; }
 
   .project-meta {
     font-family: 'JetBrains Mono', monospace;
@@ -588,16 +523,9 @@
     margin-bottom: 20px;
   }
 
-  .project-desc {
-    font-size: 19px;
-    color: var(--coffee);
-    margin-bottom: 24px;
-  }
+  .project-desc { font-size: 19px; color: var(--coffee); margin-bottom: 24px; }
 
-  .project-highlights {
-    list-style: none;
-    margin-bottom: 28px;
-  }
+  .project-highlights { list-style: none; margin-bottom: 28px; }
 
   .project-highlights li {
     padding: 6px 0;
@@ -653,16 +581,9 @@
     border-color: var(--dark-surface);
   }
 
-  .project-link.secondary {
-    background: transparent;
-    color: var(--coffee);
-  }
+  .project-link.secondary { background: transparent; color: var(--coffee); }
 
-  .project-link svg {
-    width: 14px;
-    height: 14px;
-    transition: transform 0.3s ease;
-  }
+  .project-link svg { width: 14px; height: 14px; transition: transform 0.3s ease; }
 
   .project-link:hover {
     transform: translateY(-2px);
@@ -681,15 +602,11 @@
     border-color: var(--dark-surface);
   }
 
-  .project-link:hover svg {
-    transform: translate(2px, -2px);
-  }
+  .project-link:hover svg { transform: translate(2px, -2px); }
 
-  /* Live indicator dot */
   .live-dot {
     display: inline-block;
-    width: 7px;
-    height: 7px;
+    width: 7px; height: 7px;
     border-radius: 50%;
     background: #6ABE6A;
     margin-right: 4px;
@@ -703,9 +620,7 @@
   }
 
   /* ============ EXPERIENCE TIMELINE ============ */
-  .experience {
-    background: var(--paper);
-  }
+  .experience { background: var(--paper); }
 
   .timeline {
     position: relative;
@@ -731,8 +646,7 @@
   .timeline-item::before {
     content: '✦';
     position: absolute;
-    left: 92px;
-    top: 0;
+    left: 92px; top: 0;
     color: var(--tan);
     background: var(--paper);
     padding: 4px 0;
@@ -741,8 +655,7 @@
 
   .timeline-date {
     position: absolute;
-    left: 0;
-    top: 4px;
+    left: 0; top: 4px;
     width: 80px;
     text-align: right;
     font-family: 'JetBrains Mono', monospace;
@@ -767,10 +680,7 @@
     margin-bottom: 12px;
   }
 
-  .timeline-item p {
-    color: var(--coffee);
-    font-size: 17px;
-  }
+  .timeline-item p { color: var(--coffee); font-size: 17px; }
 
   /* ============ CONTACT ============ */
   .contact {
@@ -793,10 +703,7 @@
     letter-spacing: -1px;
   }
 
-  .contact h2 .italic {
-    font-style: italic;
-    color: var(--dark-surface-accent);
-  }
+  .contact h2 .italic { font-style: italic; color: var(--dark-surface-accent); }
 
   .contact p {
     font-size: 22px;
@@ -868,18 +775,14 @@
     text-transform: uppercase;
   }
 
-  footer .ornament-footer {
-    color: var(--tan);
-    letter-spacing: 6px;
-  }
+  footer .ornament-footer { color: var(--tan); letter-spacing: 6px; }
 
   /* ============ THEME TOGGLE ============ */
   .theme-toggle {
     background: transparent;
     border: 1px solid var(--gold-line);
     color: var(--tan);
-    width: 44px;
-    height: 44px;
+    width: 44px; height: 44px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -897,12 +800,7 @@
     background: rgba(212, 165, 116, 0.08);
   }
 
-  .theme-toggle svg {
-    width: 18px;
-    height: 18px;
-    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-
+  .theme-toggle svg { width: 18px; height: 18px; transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); }
   .theme-toggle .sun-icon { display: none; }
   .theme-toggle .moon-icon { display: block; }
   [data-theme="dark"] .theme-toggle .sun-icon { display: block; }
@@ -934,11 +832,7 @@
     overflow: hidden;
   }
 
-  .hero-cta-secondary svg {
-    width: 16px;
-    height: 16px;
-    transition: transform 0.4s ease;
-  }
+  .hero-cta-secondary svg { width: 16px; height: 16px; transition: transform 0.4s ease; }
 
   .hero-cta-secondary:hover {
     background: var(--dark-surface);
@@ -946,39 +840,21 @@
     border-color: var(--dark-surface);
   }
 
-  .hero-cta-secondary:hover svg {
-    transform: translateY(3px);
-  }
+  .hero-cta-secondary:hover svg { transform: translateY(3px); }
+  .hero-cta { margin-top: 0; }
 
-  /* Adjust the existing hero-cta margin since wrapper handles it */
-  .hero-cta {
-    margin-top: 0;
-  }
-
-  /* Nav wrapper for ul + toggle */
-  .nav-right {
-    display: flex;
-    align-items: center;
-  }
+  .nav-right { display: flex; align-items: center; }
 
   /* ============ RESPONSIVE ============ */
   @media (max-width: 968px) {
     nav { padding: 20px 30px; }
     nav ul { display: none; }
-    .hero {
-      grid-template-columns: 1fr;
-      padding: 120px 30px 60px;
-      gap: 60px;
-      text-align: center;
-    }
+    .hero { grid-template-columns: 1fr; padding: 120px 30px 60px; gap: 60px; text-align: center; }
     .hero-meta { justify-content: center; flex-wrap: wrap; }
     .hero-buttons { justify-content: center; }
     .theme-toggle { margin-left: 0; }
     section { padding: 80px 30px; }
-    .about-grid, .skills-grid, .project {
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
+    .about-grid, .skills-grid, .project { grid-template-columns: 1fr; gap: 40px; }
     .project:nth-child(even) .project-visual { order: 0; }
     .about-stats { border-left: none; border-top: 1px solid var(--gold-line); padding-left: 0; padding-top: 40px; }
     .timeline::before { left: 20px; }
@@ -997,10 +873,7 @@
     transition: opacity 0.8s ease, transform 0.8s ease;
   }
 
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
@@ -1036,7 +909,7 @@
       <span class="first-letter">V</span>ishwa<br/>
       <span class="italic">A.</span>
     </h1>
-    <p class="hero-tagline">"AI/ML Engineer · LLM Developer · Based in Chennai. Final-year B.Tech (AI & ML) student, graduating 2026."</p>
+    <p class="hero-tagline">"AI/ML Engineer · LLM Developer · Based in Chennai. Final-year B.Tech (AI &amp; ML) student, graduating 2026."</p>
     <div class="hero-meta">
       <span>SRM KTR · CGPA 7.98</span>
       <span>Class of 2026</span>
@@ -1072,7 +945,8 @@
     <div class="about-text">
       <p>I'm a final-year Computer Science Engineering student specializing in AI and Machine Learning at SRM Institute of Science and Technology, Chennai — graduating May 2026.</p>
       <p>I work at the quiet intersection of <em>data, machine learning, and large language models</em>. Comfortable taking raw datasets through cleaning, EDA, feature engineering, and end-to-end model deployment.</p>
-      <p>Currently interning at <em>Pumo Technovation</em>, where I'm building an ML-based health risk prediction platform on real CDC healthcare data. I pair traditional ML rigor with modern AI tools — Claude, ChatGPT, Gemini, Copilot — for faster, cleaner iteration.</p>
+      <!-- CHANGED: updated description to reflect completed project -->
+      <p>Currently interning at <em>Pumo Technovation</em>, where I built an ML-based health risk prediction platform using NHANES 2021–2023 real CDC healthcare data — deployed live on Streamlit Cloud. I pair traditional ML rigor with modern AI tools — Claude, ChatGPT, Gemini, Copilot — for faster, cleaner iteration.</p>
     </div>
 
     <div class="about-stats">
@@ -1080,9 +954,10 @@
         <div class="stat-number">92.4%</div>
         <div class="stat-label">ROC-AUC · NHANES Diabetes Risk</div>
       </div>
+      <!-- CHANGED: from 21 ML Models Trained to 3 algorithms -->
       <div class="stat">
-        <div class="stat-number">21</div>
-        <div class="stat-label">ML Models Trained</div>
+        <div class="stat-number">3</div>
+        <div class="stat-label">ML Algorithms Compared per Target</div>
       </div>
       <div class="stat">
         <div class="stat-number">7.98</div>
@@ -1172,7 +1047,7 @@
   <div class="section-label">✦ Chapter Three</div>
   <h2 class="section-title">Selected <span class="italic">Works</span></h2>
 
-  <!-- Project 01 -->
+  <!-- Project 01 — NHANES (ALL CHANGES HERE) -->
   <div class="project reveal">
     <div class="project-visual">
       <div class="project-visual-inner">
@@ -1184,12 +1059,12 @@
     <div class="project-content">
       <div class="project-meta">№ 01 · Mar 2026 – Present</div>
       <h3>NHANES Health Risk Prediction</h3>
-      <p class="project-desc">An end-to-end ML pipeline trained on CDC NHANES 2021–2023 healthcare data — turning real-world patient records into actionable risk predictions.</p>
+      <p class="project-desc">An end-to-end ML pipeline trained on CDC NHANES 2021–2023 healthcare data — turning real-world patient records into actionable health risk predictions.</p>
       <ul class="project-highlights">
-        <li>Ingested 19 XPT files into MySQL; cleaned 11,933 → 6,235 records with SQL special-code handling</li>
-        <li>Engineered 11 clinical features including HOMA-IR and cholesterol ratios</li>
-        <li>Trained 21 ML models across 7 health conditions — LR, RF, XGBoost</li>
-        <li>Deployed a 7-page Streamlit dashboard with personalised AI health advice</li>
+        <!-- CHANGED: removed specific numbers, matched resume -->
+        <li>Loaded NHANES 2021–2023 CDC health data into MySQL using Python, cleaned raw files with SQL including special code handling and medical range validation</li>
+        <li>Created clinical features (HOMA-IR, cholesterol ratios, waist-height ratio) and trained LR, RF, and XGBoost models across 7 health conditions</li>
+        <li>Deployed a 7-page Streamlit dashboard on Streamlit Cloud for real-time health risk prediction with AI-generated advice based on ADA, AHA, and WHO guidelines</li>
       </ul>
       <div class="project-stack">Python · MySQL · Pandas · Scikit-learn · XGBoost · Streamlit</div>
       <div class="project-links">
@@ -1200,7 +1075,7 @@
             <path d="M7 17L17 7M17 7H8M17 7V16"/>
           </svg>
         </a>
-        <a href="https://github.com/itzmevishwa" target="_blank" rel="noopener" class="project-link secondary">
+        <a href="https://github.com/itzmevishwa/HealthAI-Clinical-Risk-Studio" target="_blank" rel="noopener" class="project-link secondary">
           <svg viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
           </svg>
@@ -1290,7 +1165,8 @@
       <div class="timeline-date">Mar 2026 — Present</div>
       <h3>Data &amp; ML Intern</h3>
       <div class="company">Pumo Technovation · Chennai</div>
-      <p>Developing an ML-based health risk prediction platform using NHANES 2021–2023 real-world CDC healthcare data. Working with Python, MySQL, Scikit-learn, XGBoost, and Streamlit in a production-style data science pipeline. Achieved 92.4% ROC-AUC for diabetes risk across 6,235 patient records.</p>
+      <!-- CHANGED: removed specific patient record count -->
+      <p>Built an ML-based health risk prediction platform using NHANES 2021–2023 real-world CDC healthcare data. Worked with Python, MySQL, Scikit-learn, XGBoost, and Streamlit in a production-style data science pipeline. Deployed live on Streamlit Cloud with real-time cardiometabolic risk predictions across 7 health conditions.</p>
     </div>
 
     <div class="timeline-item">
@@ -1344,7 +1220,6 @@
   const themeToggle = document.getElementById('themeToggle');
   const html = document.documentElement;
 
-  // Load saved theme or detect system preference
   const savedTheme = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
@@ -1377,7 +1252,6 @@
     observer.observe(el);
   });
 
-  // Staggered stat animation
   const statObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, idx) => {
       if (entry.isIntersecting) {
@@ -1391,7 +1265,6 @@
 
   document.querySelectorAll('.about-stats').forEach(el => statObserver.observe(el));
 
-  // Smooth nav highlighting
   document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
